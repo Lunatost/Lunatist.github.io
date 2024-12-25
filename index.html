@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styl Ankiety</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-wrapper">
+        <div class="container">
+            <h1>Wybierz ustawienia druku</h1>
+            
+            <!-- Pytanie 1: Material -->
+            <div class="question">
+                <div class="label">Material:</div>
+                <div class="options" data-question="material">
+                    <div class="option" data-value="PLA">PLA</div>
+                    <div class="option" data-value="ABS">ABS</div>
+                    <div class="option" data-value="PET-G">PET-G</div>
+                    <div class="option" data-value="TPU">TPU</div>
+                    <div class="option" data-value="PLA_PLUS">PLA+</div>
+                </div>
+            </div>
+
+            <!-- Pytanie 2: Dodatki -->
+            <div class="question">
+                <div class="label">Dodatki:</div>
+                <div class="options" data-question="additive">
+                    <div class="option" data-value="NONE">BRAK</div>
+                    <div class="option" data-value="TRANSLUCENT">PRZEPUSZCZALNY</div>
+                    <div class="option" data-value="MATTE">MATOWY</div>
+                    <div class="option" data-value="GLOW_IN_THE_DARK">ŚWIECĄCY W CIEMNOŚCI</div>
+                    <div class="option" data-value="MULTICOLOR">WIELOKOLOROWY</div>
+                    <div class="option" data-value="METAL">METAL</div>
+                    <div class="option" data-value="WOOD">DREWNO</div>
+                </div>
+            </div>
+
+            <!-- Pytanie 3: Kolor -->
+            <div class="question">
+                <div class="label">Kolor:</div>
+                <div class="options" data-question="color">
+                    <div class="option" data-value="RED">Czerwony</div>
+                    <div class="option" data-value="BLUE">Niebieski</div>
+                    <div class="option" data-value="GREEN">Zielony</div>
+                    <div class="option" data-value="BLACK">Czarny</div>
+                    <div class="option" data-value="WHITE">Biały</div>
+                    <div class="option" data-value="GRAY">Ciemnoszary</div>
+                    <div class="option" data-value="LIGHT_GRAY">Jasnoszary</div>
+                    <div class="option" data-value="YELLOW">Żółty</div>
+                    <div class="option" data-value="ORANGE">Pomarańczowy</div>
+                    <div class="option" data-value="LIME">Limonkowy</div>
+                    <div class="option" data-value="OTHER">Inny</div>
+                </div>
+            </div>
+
+            <!-- Pytanie 4: Ilość -->
+            <div class="question">
+                <div class="label" for="quantity">Ilość:</div>
+                <input type="number" id="quantity" name="quantity" min="1" max="1000" placeholder="--" required>
+            </div>
+            
+            <!-- Pytanie 5: Masa -->
+            <div class="question">
+                <div class="label" for="weight">Masa [g]:</div>
+                <input type="number" id="weight" name="weight" min="1" max="10000" placeholder="--" required>
+            </div>
+
+            <!-- Pytanie 6: Wymiary -->
+            <div class="question">
+                <div class="label">Wymiar [mm]:</div>
+                <div class="options">
+                    <input type="number" id="dimx" name="dimx" min="1" max="220" placeholder="x" required> 
+                    <input type="number" id="dimy" name="dimy" min="1" max="220" placeholder="y" required> 
+                    <input type="number" id="dimz" name="dimz" min="1" max="250" placeholder="z" required>
+                </div>
+            </div>
+
+            <!-- Pytanie 7: Termin -->
+             <div class="question">
+                <div class="label">Czas wykonania:</div>
+                <div class="options" data-question="time">
+                    <div class="option" data-value="SHORT">Do 3 dni</div>
+                    <div class="option" data-value="MIDIUM">Do 9 dni</div>
+                    <div class="option" data-value="LONG">Do 21 dni</div>
+                </div>
+            </div>
+
+            <!-- Pytanie 8: Wykończenie -->
+            <div class="question">
+                <div class="label">Wykończenie:</div>
+                <div class="options" data-question="finishing">
+                    <div class="option" data-value="TAK">Tak</div>
+                    <div class="option" data-value="NIE">Nie</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kontener wyników -->
+        <div class="result-container">
+            <h2>Szacowana cena 
+                <span class="tooltip">
+                    <span class="tooltip-icon">?</span>
+                    <span class="tooltip-text">Cena może wzrosnąć w przypadku występowania podpór.</span>
+                </span>
+            </h2>
+            <p id="calculation-result">--</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

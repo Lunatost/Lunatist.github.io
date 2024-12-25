@@ -1,0 +1,178 @@
+/* Ogólne style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Wrapper dla kontenerów */
+.container-wrapper {
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie kontenerów */
+    align-items: flex-start;
+    gap: 20px; /* Odstęp między kontenerami */
+}
+
+/* Kontener na formularz */
+.container {
+    max-width: 700px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Kontener na wyniki */
+.result-container {
+    width: 250px;
+    padding: 20px;
+    background: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Nagłówek */
+h1 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+.result-container h2 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.result-container p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Sekcje z pytaniami */
+.question {
+    display: flex;
+    flex-direction: row;    
+    margin-bottom: 20px;
+}
+
+/* Styl dla etykiety */
+.question label {
+    font-weight: bold;
+    width: 150px;
+}
+
+/* Styl dla opcji */
+.options {
+    display: flex;
+    flex-direction: row;  
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: flex-start;
+    width: 80%;
+    
+}
+
+.option {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.option.selected {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.option.disabled {
+    background-color: #ccc;
+    color: #333;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
+
+.option:hover {
+    background-color: #e7f3ff;
+}
+
+input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 75px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Styl dla ikony zapytania */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.tooltip-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Chmurka z tekstem */
+.tooltip-text {
+    width: 200px;
+    visibility: hidden;
+    background-color: #fff; /* Zmiana tła na biały */
+    color: #333; /* Dopasowanie tekstu do stylu */
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Delikatna ramka dla lepszego wyglądu */
+    font-size: 12px; /* Zmniejszenie czcionki */
+
+    /* Pozycja chmurki */
+    position: absolute;
+    bottom: 130%; /* Ustawia chmurkę powyżej ikony */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    /* Strzałka pod chmurką */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip-text::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Ustawia strzałkę pod chmurką */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent; /* Strzałka z białym tłem */
+}
+
+/* Wyświetlanie chmurki po najechaniu */
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.label {
+    width: 20%;
+    font-weight: bold;
+}

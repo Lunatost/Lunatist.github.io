@@ -1,0 +1,15 @@
+{
+    "PLA": {
+        "NONE": {
+            "GRAY": 4000
+        },
+        "GLOW_IN_THE_DARK": {
+            "RED": 900
+        }
+    },
+    "PLA_PLUS": {
+        "NONE": {
+            "BLACK": 1000
+        }
+    }
+}
